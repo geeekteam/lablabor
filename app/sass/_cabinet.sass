@@ -1,0 +1,688 @@
+.section__body-cabinet
+	background: linear-gradient(to bottom, #ffffff 0%,#aeaeae 100%)
+
+.tab-bar
+	list-style: none
+	display: flex
+
+.tab-bar__item
+	position: relative
+	font-family: "Gotham Pro Medium", sans-serif
+	text-align: center
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-grow: 1
+	flex-shrink: 0
+	flex-basis: 0
+	width: 100%
+	background-color: transparent
+	min-height: 55px
+	padding: 0 12px
+	color: $dark-dull-gray
+	border: 1px solid $forest-green
+	border-top-left-radius: 15px
+	border-top-right-radius: 15px
+	margin-right: 15px
+	font-size: 14px
+	+transition(all 0.3s ease)
+	cursor: pointer
+	text-transform: uppercase
+	&:hover
+		background-color: $forest-green
+		color: $white
+	&.active
+		background-color: $forest-green
+		color: $white
+	&:last-child
+		margin-right: 0
+
+.tab-tab__item_small
+	max-width: 65px
+
+.tab-bar__item-wrapper
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 100%
+	width: 100%
+
+.tab-bar__item_blue
+	border-color: #5b6a91
+	&:hover
+		background-color: #5b6a91
+	&.active
+		background-color: #5b6a91
+		color: $white
+
+.tab-bar_employer
+	max-width: 55%
+
+.cabinet-employer-main
+	display: flex
+
+.cabinet-employer-main__image-controls
+	position: relative
+	height: 100%
+	width: 100%
+	padding: 20px 10px
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: flex-start
+	background-color: rgba(#5b6a91, 0.7)
+	+transition(all 0.3s ease)
+
+.cabinet-employer-main-logo
+	position: relative
+
+.cabinet-employer-main__image-wrapper
+	position: relative
+	border: 1px solid $dark-dull-gray
+	overflow: hidden
+	&:hover
+		.cabinet-employer-main__image-controls
+			margin-top: -85px
+
+.cabinet-employer-main-grid
+	display: flex
+	align-items: center
+	position: relative
+
+.cabinet-employer-main__left
+	padding-left: 10px
+	margin-right: 60px
+
+.cabinet-employer-main__right
+	padding-top: 25px
+	flex-grow: 1
+
+.cabinet-employer-main-grid__left
+	display: flex
+	align-items: flex-start
+	width: 170px
+	margin-right: 10px
+	flex-shrink: 0
+
+.cabinet-employer-main-grid__left_pl25
+	padding-left: 25px
+
+.cabinet-employer-main-grid__right
+	display: flex
+	flex-grow: 1
+
+.cabinet-employer-main__select-small
+	width: 100px
+	.jq-selectbox__select
+		padding: 0 10px
+
+	.jq-selectbox__dropdown
+		padding: 5px 5px 0 10px
+		&::after
+			right: 10px
+
+.cabinet-employer-main__input
+	flex-grow: 1
+	flex-shrink: 0
+	flex-basis: 0
+	color: $dark-dull-gray
+	&::-webkit-input-placeholder
+		color: $dark-dull-gray
+
+	&::-moz-placeholder
+		color: $dark-dull-gray
+		opacity: 1
+	&:-moz-placeholder
+		color: $dark-dull-gray
+		opacity: 1
+	&:-ms-input-placeholder
+		color: $dark-dull-gray
+		opacity: 1
+
+.work-period-wrapper
+	flex-shrink: 0
+	width: 100%
+	margin-right: 15px
+	max-width: 140px
+
+.cabinet-employer-main_children-count
+	margin-bottom: 10px
+	&:last-child
+		margin-bottom: 0
+
+.vacancy-list__item
+	display: flex
+	padding-bottom: 20px
+	margin-bottom: 20px
+	flex-wrap: wrap
+
+.vacancy-list__vacancy
+	width: 100%
+	display: block
+	.hidden
+		display: none
+
+.checkbox-switcher-wrapper
+	width: 290px
+	margin-right: 10px
+	display: flex
+	position: relative
+	
+.cabinet-employer-hint
+	z-index: 1000
+	position: absolute
+	top: 200%
+	right: 0
+	background-color: $pigeon-blue
+	max-width: 320px
+	width: 100%
+	padding: 15px 25px
+	border-radius: 10px
+	opacity: 0
+	visibility: hidden
+	transition: all 0.5s ease
+	&::after
+		position: absolute
+		content: ''
+		left: 50%
+		transform: translateX(-50%)
+		top: -11px
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 6.5px 11px 6.5px
+		border-color: transparent transparent $pigeon-blue transparent
+	&.active
+		opacity: 1
+		visibility: visible
+
+.cabinet-employer-activate-hint
+	z-index: 100
+	position: absolute
+	display: flex
+	align-items: center
+	width: 435px
+	padding: 30px 25px
+	top: 50%
+	right: -51%
+	transform: translate(51%, -50%)
+	background-color: #FFFFFF
+	border: 1px solid #848484
+	border-radius: 15px
+	opacity: 0
+	visibility: hidden
+	&::after
+		position: absolute
+		content: ''
+		width: 0
+		height: 0
+		left: -12px
+		top: 50%
+		transform: translateY(-50%)
+		border-style: solid
+		border-width: 7px 15px 7px 0
+		border-color: transparent #FFFFFF transparent transparent
+	&::before
+		position: absolute
+		content: ""
+		left: -15px
+		top: 50%
+		transform: translateY(-50%)
+		border-style: solid
+		border-width: 7px 15px 7px 0
+		border-color: transparent #848484 transparent transparent
+	&.active
+		opacity: 1
+		visibility: visible
+
+.hint-small
+	opacity: 0
+	visibility: hidden
+	top: -200px
+	position: absolute
+	display: flex
+	background-color: #FFFFFF
+	border: 1px solid #848484
+	border-radius: 15px
+	width: 285px
+	padding: 20px
+	left: 60%
+	transform: translateX(-60%)
+	align-items: flex-start
+	z-index: 10000
+	transition: all 0.3s ease
+	&::after, &::before
+		position: absolute
+		content: ''
+		left: 50%
+		transform: translateX(-50%)
+		width: 0
+		height: 0
+		border-style: solid
+	&::after
+		bottom: -10px
+		border-width: 11px 5px 0 5px
+		border-color: #FFFFFF transparent transparent transparent
+	&::before
+		bottom: -12px
+		border-width: 11px 5px 0 5px
+		border-color: #848484 transparent transparent transparent
+	&.active
+		top: -130px
+		opacity: 1
+		visibility: visible
+
+.fri_exclamation-green
+	flex-shrink: 0
+
+.checkbox-switcher__label
+	text-transform: uppercase
+	font-family: "Gotham Pro Medium", sans-serif
+	font-size: 14px
+	color: #272727
+	position: relative
+	padding-bottom: 20px
+	width: 230px
+	&::before
+		position: absolute
+		content: ''
+		border-bottom: 1px solid #616161
+		width: 135px
+		bottom: 0
+		left: 0
+
+.vacancy-list
+	padding: 0 45px
+
+.vacancy-list__salary
+	font-family: "Gotham Pro Light", sans-serif
+	font-size: 14px
+	width: 150px
+	color: #272727
+	margin-right: 10px
+	text-transform: uppercase
+
+.fri_edit
+	flex-shrink: 0
+	cursor: pointer
+
+.fri_remove
+	flex-shrink: 0
+	cursor: pointer
+
+.vacancy-list__statistic
+	position: relative
+	font-family: "PT Serif Italic", sans-serif
+	font-size: 14px
+	margin-right: 10px
+	color: #616161
+
+.vacancy-list__statistic-count
+	width: 21px
+	height: 21px
+	background-color: $forest-green
+	border-radius: 50%
+	flex-shrink: 0
+	font-size: 12px
+	display: flex
+	align-items: center
+	justify-content: center
+	transition: all 0.3s ease
+	&:hover
+		opacity: 0.5
+
+.vacancy-list__statistic-count
+	background-color: $forest-green
+	border-radius: 50%
+	padding: 2px
+	color: $white
+
+.cabinet-employer-vacancy
+	position: relative
+	margin-top: 30px
+	padding: 30px 35px 30px 20px
+	background: linear-gradient(to bottom, #f6f6f6, #dadada)
+	border: 1px solid #b2b2b2
+	border-radius: 15px
+	.jq-selectbox__select, .input, .textarea
+		background-color: transparent
+
+.cabinet-employer-vacancy_close-button, .close-button-gray
+	position: absolute
+	top: -7px
+	right: -5px
+	cursor: pointer
+	width: 20px
+	height: 20px
+	background-color: #838383
+	border: 1px solid #838383
+	border-radius: 50%
+	transform: rotate(45deg)
+	+transition(all 0.3s ease)
+	&:hover
+		background-color: #ffffff
+		&::after, &::before
+			background-color: #838383
+	&::after, &::before
+		position: absolute
+		content: ''
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		background-color: #ededed
+		+transition(all 0.3s ease)
+	&::after
+		width: 12px
+		height: 2px
+	&::before
+		width: 2px
+		height: 12px
+
+.close-button-gray_relative
+	position: relative
+	top: 0
+	right: 0
+
+.close-button-gray_driver-license
+	top: 5px
+	right: 0
+
+.cabinet-employer-vacancy-grid
+	display: flex
+	align-items: center
+	margin-bottom: 10px
+	&:nth-last-child(2)
+		margin-bottom: 60px
+	&:last-child
+		margin-bottom: 0
+
+.cabinet-employer-vacancy-grid__left
+	width: 150px
+	margin-right: 25px
+	flex-shrink: 0
+
+.cabinet-employer-vacancy-grid__right
+	display: flex
+	flex-grow: 1
+	align-items: center
+
+.cabinet-employer-vacancy__salary-input
+	max-width: 740px
+	width: 100%
+	margin-right: 20px
+	flex-shrink: 1
+
+.cabinet-employer-vacancy-grid__statistic
+	cursor: pointer
+	&:hover
+		.cabinet-employer-vacancy-grid__statistic-count
+			background-color: #fff
+			color: $forest-green
+
+.cabinet-employer-vacancy-grid__statistic-text
+	font-size: 14px
+	font-family: "Gotham Pro Light", sans-serif
+	color: #000
+	text-transform: uppercase
+	padding-bottom: 2px
+	border-bottom: 1px solid #b7b7b7
+	align-self: center
+	+transition(all 0.2s ease)
+
+.cabinet-employer-vacancy-grid__statistic-count
+	width: 28px
+	height: 28px
+	flex-shrink: 0
+	color: #FFFFFF
+	background-color: $forest-green
+	border: 1px solid $forest-green
+	border-radius: 50%
+	display: flex
+	align-items: center
+	justify-content: center
+	align-self: center
+	+transition(all 0.2s ease)
+	
+.cabinet-employer-payment-types
+	max-width: 65px
+	flex-shrink: 0
+
+.cabinet-employer-payment-type
+	width: 65px
+	height: 75px
+
+	background-color: #cdcdcd
+	flex-shrink: 0
+	cursor: pointer
+	border-bottom-left-radius: 10px
+	border-top-left-radius: 10px
+	&.active
+		background-color: #ebebeb
+
+	.cabinet-employer-payment-type__wrapper
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 100%
+		width: 100%
+
+
+.cabinet-employer-payment-types-descr
+	flex-grow: 1
+	display: flex
+	background-color: #ebebeb
+	align-items: center
+	justify-content: center
+	position: relative
+	overflow: hidden
+	.cabinet-employer-payment-types__tab
+		visibility: hidden
+		opacity: 0
+		position: absolute
+		width: 100%
+		top: 50%
+		transform: translateY(-50%) perspective(400px) rotate3d(1, 0, 0, 180deg)
+		transition: all 0.3s ease
+		&.active
+			visibility: visible
+			opacity: 1
+			left: 0
+			transform: translateY(-50%) perspective(400px) rotate3d(1, 0, 0, 0deg)
+
+.cabinet-tab
+	opacity: 0
+	visibility: hidden
+	position: absolute
+	display: none
+	top: 0
+	left: 0
+	&.active
+		position: relative
+		opacity: 1
+		visibility: visible
+		display: block
+
+
+.subscriber-package
+	display: flex
+	align-items: center
+	margin-bottom: 15px
+	&:last-child
+		margin-bottom: 0
+
+.subscriber-package__descr
+	max-width: 850px
+	width: 100%
+
+.subscriber-package__box
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	width: 260px
+	border: 1px solid $pigeon-blue
+	padding: 30px 40px
+
+.subscriber-package__price
+	position: relative
+	min-height: 50px
+	min-width: 100px
+	background-color: $forest-green
+	color: $white
+	display: flex
+	align-items: center
+	justify-content: center
+	&::after, &::before
+		position: absolute
+		content: ''
+		top: 50%
+		transform: translateY(-50%)
+		width: 15px
+		height: 30px
+		background-color: $forest-green
+	&::after
+		left: -15px
+		border-bottom-left-radius: 30px
+		border-top-left-radius: 30px
+	&::before
+		right: -15px
+		border-bottom-right-radius: 30px
+		border-top-right-radius: 30px
+
+.subscriber-package__buy
+	width: 100%
+
+
+// applicant / соискатель
+
+.tab-bar__item-count
+	position: absolute
+	top: -15px
+	right: -15px
+	width: 30px
+	height: 30px
+	background-color: $forest-green
+	border-radius: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+	color: $white
+	font-size: 18px
+	font-family: "Gotham Pro Medium", sans-serif
+	border: 2px solid $white
+
+.cabinet-employer-main__day, .cabinet-employer-main__month
+	min-width: 135px
+	flex-shrink: 0
+	flex-basis: 0
+	.jq-selectbox__select
+		padding-left: 15px
+		display: flex
+		justify-content: space-between
+	.jq-selectbox__dropdown
+		padding-left: 15px
+		&::after
+			content: none
+			//right: 20px
+		ul
+			max-height: 200px
+
+.cabinet-employer-main__year
+	.jq-selectbox__select
+		padding-left: 15px
+		display: flex
+		justify-content: space-between
+	.jq-selectbox__dropdown
+		padding-left: 15px
+		&::after
+			content: none
+		//right: 20px
+		ul
+			max-height: 200px
+
+.select__children-count
+	min-width: 260px
+	flex-shrink: 0
+	flex-basis: 0
+	.jq-selectbox__select
+		padding-left: 15px
+		display: flex
+		justify-content: space-between
+	.jq-selectbox__dropdown
+		padding-left: 15px
+		&::after
+			right: 10px
+
+.children-count-wrapper
+	margin-bottom: 10px
+	&:last-child
+		margin-bottom: 0
+
+.cabinet-input-title
+	width: 160px
+	font-family: "PT Serif Italic"
+	font-size: 14px
+	color: $dark-dull-gray
+	flex-shrink: 0
+
+.cabinet-education-box, .cabinet-box
+	position: relative
+	display: flex
+	flex-direction: column
+	padding: 30px 30px 25px 30px
+	background: linear-gradient(to bottom, #f9f9f9, #f5f5f5)
+	border: 1px solid #b0b0b0
+	border-radius: 25px
+
+.cabinet-education-box_empty
+	padding: 0
+	background: none
+	border: none
+	border-radius: 0
+
+.cabinet-box_portfolio
+	width: 960px
+	padding: 30px 90px
+	margin: 0 auto
+
+.cabinet-education-box-title
+	position: relative
+	font-family: "Gotham Pro Medium", sans-serif
+	font-size: 14px
+	text-transform: uppercase
+	color: #616161
+	padding-right: 20px
+	&::after
+		position: absolute
+		content: ''
+		width: 0
+		height: 0
+		top: 50%
+		transform: translateY(-50%)
+		right: 0
+		border-style: solid
+		border-width: 7px 7.5px 0 7.5px
+		border-color: #9f9f9f transparent transparent transparent
+
+.cabinet-education-box-title_without-arrow
+	&::after
+		content: none
+		
+.portfolio_thumbnail
+	position: relative
+	> .close-button-gray
+		display: none
+	&:hover
+		> .close-button-gray
+			display: block
+			top: 5px
+			right: 8px
+
+.custom-checkbox-switcher
+	.js-destroy-form-styler
+		display: none
+	.custom-checkbox__div
+		cursor: pointer
+	input[type=checkbox]:checked
+		& ~ .vacancy-list__vacancy-hidden
+			display: block

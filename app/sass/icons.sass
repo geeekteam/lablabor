@@ -1,0 +1,341 @@
+@import "mixins/mixins"
+//@import "framework"
+
+.fri
+	display: inline-block
+	vertical-align: middle
+	width: 100%
+
+.fri_search-button-loupe
+	+sprite(loupe)
+
+.fri_search-button-loupe-17x18
+	+sprite(loupe17x18)
+
+.inputs-header__select
+	.jq-selectbox__trigger
+		.jq-selectbox__trigger-arrow
+			&:after
+				+sprite(arrow-up)
+
+			&:before
+				+sprite(arrow-down)
+
+.fri_facebook, .settings-network-facebook
+	+sprite(facebook)
+	&.active
+		+sprite(facebook-green)
+
+.fri_google, .settings-network-google
+	+sprite(google)
+	&.active
+		+sprite(google-green)
+
+.fri_instagram, .settings-network-instagram
+	+sprite(instagram)
+	&.active
+		+sprite(instagram-green)
+
+.fri_twitter, .settings-network-twitter
+	+sprite(twitter)
+	&.active
+		+sprite(twitter-green)
+
+.fri_vkontakte, .settings-network-vkontakte
+	+sprite(vkontakte)
+	&.active
+		+sprite(vkontakte-green)
+
+.fri_vkontakte-green
+	+sprite(vkontakte-green)
+
+.fri_twitter-green
+	+sprite(twitter-green)
+
+.fri_instagram-green
+	+sprite(instagram-green)
+
+.fri_google-green
+	+sprite(google-green)
+
+.fri_facebook-green
+	+sprite(facebook-green)
+
+.settings-network-facebook
+	+sprite(settings-network-facebook)
+	&:hover
+		+sprite(facebook-green)
+
+.settings-network-google
+	+sprite(settings-network-google)
+	&:hover, &.active
+		+sprite(google-green)
+
+.settings-network-instagram
+	+sprite(settings-network-instagram)
+	&:hover, &.active
+		+sprite(instagram-green)
+
+.settings-network-twitter
+	+sprite(settings-network-twitter)
+	&:hover, &.active
+		+sprite(twitter-green)
+
+.settings-network-vkontakte
+	+sprite(settings-network-vkontakte)
+	&:hover, &.active
+		+sprite(vkontakte-green)
+
+.settings-network-facebook
+	&:hover, &.active
+		+sprite(facebook-green)
+
+.fri_logo-footer
+	+sprite(logo-footer)
+
+.fri_logo-new
+	+sprite(logo-new)
+
+.fri_logo-text
+	+sprite(logo-text)
+
+.jq-checkbox
+	font-size: 0
+	line-height: 0
+
+.checkbox
+	.jq-checkbox__div
+		display: inline-block
+		vertical-align: middle
+		width: 10px
+		height: 10px
+		border: 1px solid #fff
+		border-radius: 100%
+		position: relative
+
+		&:after
+			position: absolute
+			top: 50%
+			left: 50%
+			content: ''
+			display: block
+			transform: translate(-50%, -50%)
+			width: 4px
+			height: 4px
+			background: #fff
+			border-radius: 100%
+			opacity: 0
+			+transition()
+
+	input:checked
+		& + .jq-checkbox__div
+			&:after
+				opacity: 1
+
+.fri_resume
+	+sprite(resume)
+
+.fri_target
+	+sprite(target)
+
+.fri_cooperation
+	+sprite(cooperation)
+
+.fri_dream-work
+	+sprite(dream-work)
+
+.fri_avatar
+	+sprite(user-avatar)
+
+.auth-slider
+	.owl-prev, .owl-next
+		+sprite(big-arrow)
+
+	.owl-prev
+		+sprite(big-arrow)
+
+	.owl-next
+		+sprite(big-arrow)
+
+.announce_backing
+	&::before
+		+sprite(backing-angle)
+	&::after
+		+sprite(backing-angle)
+
+.auth-slider__second-slide-announce-backing
+	&::after
+		+sprite(backing-angle)
+	&::before
+		+sprite(backing-angle)
+
+.announce__content
+	&::before
+		+sprite(exclamation)
+
+.fri_exclamation-green
+	+sprite(exclamation-green)
+
+.fri_announce-content-close
+	+sprite(announce-close-button)
+
+.fri_non-cash-credit-card
+	+sprite(non-cash-credit-card)
+
+.fri_non-cash-man
+	+sprite(non-cash-man)
+
+.fri_non-cash-terminal
+	+sprite(non-cash-terminal)
+
+.fri_non-cash-credit-card-gray
+	+sprite(non-cash-credit-card-gray)
+
+.fri_non-cash-man-gray
+	+sprite(non-cash-man-gray)
+
+.fri_non-cash-terminal-gray
+	+sprite(non-cash-terminal-gray)
+
+.fri_visa
+	+sprite(visa)
+
+.fri_american-express
+	+sprite(american-express)
+
+.fri_master-card
+	+sprite(master-card)
+
+.fri_filter-remove-input
+	+sprite(filter-remove-input)
+
+.fri_filter-add-input
+	+sprite(filter-add-input)
+
+.fri_print
+	+sprite(print)
+
+.fri_calendar
+	+sprite(calendar)
+
+.fri_place
+	+sprite(place)
+
+.fri_place-gray
+	+sprite(place-gray)
+
+.fri_sex
+	+sprite(sex)
+
+.fri_marital-status
+	+sprite(marital-status)
+
+.fri_email
+	+sprite(email)
+
+.fri_email-gray
+	+sprite(email-gray)
+
+.fri_phone
+	+sprite(phone)
+
+.fri_phone-gray
+	+sprite(phone-gray)
+
+.fri_education
+	+sprite(education)
+
+.fri_experience
+	+sprite(experience)
+
+.fri_skills
+	+sprite(skills)
+
+.fri_additional
+	+sprite(additional)
+
+.fri_probation
+	+sprite(probation)
+
+.fri_checked
+	+sprite(checked)
+
+.fri_thrash
+	+sprite(thrash)
+
+.fri_views
+	+sprite(views)
+
+.fri_message
+	+sprite(message)
+
+.fri_website-on-pdf
+	+sprite(website-on-pdf)
+
+.fri_email-on-pdf
+	+sprite(email-on-pdf)
+
+.fri_phone-on-pdf
+	+sprite(phone-on-pdf)
+
+.fri_back-to
+	+sprite(back-to)
+
+.fri_statistic
+	+sprite(statistic)
+
+.fri_invitations
+	+sprite(invitations)
+
+.fri_required
+	+sprite(required)
+
+.fri_edit
+	+sprite(edit)
+
+.fri_remove
+	+sprite(remove)
+
+.checkbox-switcher
+	.jq-checkbox
+		+sprite(switcher-off)
+	.checked
+		+sprite(switcher-on)
+
+.fri_practice
+	+sprite(practice)
+
+.tab-bar__item_blue
+	&:hover
+		.fri_practice
+			+sprite(practice-white)
+	&.active
+		.fri_practice
+			+sprite(practice-white)
+
+.fri_credit-card-gray
+	+sprite(credit-card-gray)
+
+.fri_non-cash-gray
+	+sprite(non-cash-gray)
+
+.green-checkbox
+	.checked
+		.jq-checkbox__div
+			+sprite(checkbox-green-checked)
+
+.fri_warning
+	+sprite(warning)
+
+.custom-checkbox-switcher
+	.custom-checkbox__div
+		+sprite(switcher-off)
+	input[type=checkbox]:checked
+		& + .custom-checkbox__div
+			+sprite(switcher-on)
+
+.static-checkbox-switcher-on
+	+sprite(switcher-on)
+
+.static-checkbox-switcher-off
+	+sprite(switcher-off)

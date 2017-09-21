@@ -1,0 +1,199 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Расширенный поиск резюме{% endblock %}
+
+{% set auth = 'true' %}
+{% set mobile = 'true' %}
+{% set page_clear = 'false' %}
+
+{% block content %}
+
+    <div class="section section__body-without-subheader pt50 pb110 tab-pt15 tab-pb15">
+        <div class="container container_800">
+            <div class="cv-finder">
+                <p class="cv-finder__title fz18 text-medium text-uppercase mb40">Поиск резюме</p>
+                <form>
+                    <div class="cv-finder-grid mb30">
+                        <div class="cv-finder-grid__left flex-align-center text-italic fz14 mr20">
+                            Название вакансии
+                        </div>
+                        <div class="cv-finder-grid__right">
+                            <div class="default-select mr10">
+                                <select class="">
+                                    <option class="text-dull-gray" disabled selected>Выберите из списка</option>
+                                    <option>Дизайнер</option>
+                                    <option>Бариста</option>
+                                    <option>Продавец вейпов</option>
+                                    <option>Дегустатор маффинов</option>
+                                </select>
+                            </div>
+                            <div class="round-loupe"><i class="fri_search-button-loupe-17x18"></i></div>
+                        </div>
+                    </div>
+                    <div class="cv-finder-grid mb30">
+                        <div class="cv-finder-grid__left flex-align-center text-italic fz14 mr20">
+                            Город
+                        </div>
+                        <div class="cv-finder-grid__right">
+                            <div class="default-select">
+                                <select>
+                                    <option class="text-dull-gray" disabled selected>Выберите город</option>
+                                    <option>Алматы</option>
+                                    <option>Астана</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cv-finder-grid mb30">
+                        <div class="cv-finder-grid__left flex-align-start text-italic fz14 mr20">
+                            Опыт работы
+                        </div>
+                        <div class="cv-finder-grid__right flex-wrap">
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience">
+                                <span class="text-italic fz14">Не важно</span>
+                            </label>
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience">
+                                <span class="text-italic fz14">без опыта</span>
+                            </label>
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience">
+                                <span class="text-italic fz14">до 1 года</span>
+                            </label>
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience">
+                                <span class="text-italic fz14">от 1 года до 3 лет</span>
+                            </label>
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience">
+                                <span class="text-italic fz14">От 3 до 5 лет</span>
+                            </label>
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience">
+                                <span class="text-italic fz14">От 5 до 10 лет</span>
+                            </label>
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience">
+                                <span class="text-italic fz14">Свыше 10 лет</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="cv-finder-grid mb30">
+                        <div class="cv-finder-grid__left flex-align-center text-italic fz14 mr20">
+                            Уровень зарплаты
+                        </div>
+                        <div class="cv-finder-grid__right tab-flex-column tab-flex-align-start">
+                            <div class="cv-finder-grid__salary tab-mb20">
+                                <div class="cv-finder-grid__salary-from mr15">
+                                    <span class="cv-finder-grid__salary-label mr10">От</span>
+                                    <input class="cv-finder-grid__salary-input default-input" type="text">
+                                </div>
+                                <div class="cv-finder-grid__salary-to mr20 tab-mr0">
+                                    <span class="cv-finder-grid__salary-label mr10">До</span>
+                                    <input class="cv-finder-grid__salary-input default-input tab-mr0" type="text">
+                                </div>
+                            </div>
+                            <div class="cv-finder-grid__currency">
+                                <span class="cv-finder-grid__salary-label mr15">Валюта</span>
+                                <div class="default-select">
+                                    <select class="">
+                                        <option class="text-dull-gray" disabled selected>Выберите валюту</option>
+                                        <option>Тенге</option>
+                                        <option>Доллары</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cv-finder-grid mb30">
+                        <div class="cv-finder-grid__left flex-align-start text-italic fz14 mr20">
+                            Возраст
+                        </div>
+                        <div class="cv-finder-grid__right flex-wrap">
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="age">
+                                <label class="text-italic fz14">До 25 лет</label>
+                            </label>
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="age">
+                                <label class="text-italic fz14">от 25 до 35 лет</label>
+                            </label>
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="age">
+                                <label class="text-italic fz14">от 35 до 45 лет</label>
+                            </label>
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="age">
+                                <label class="text-italic fz14">от 45 до 60 лет</label>
+                            </label>
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="age">
+                                <label class="text-italic fz14">старше 60 лет</label>
+                            </label>
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="age">
+                                <label class="text-italic fz14">Не важно</label>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="cv-finder-grid mb30">
+                        <div class="cv-finder-grid__left flex-align-center text-italic fz14 mr20">
+                            Тип занятости
+                        </div>
+                        <div class="cv-finder-grid__right">
+                            <div class="default-select">
+                                <select>
+                                    <option class="text-dull-gray" disabled selected>Выберите из списка</option>
+                                    <option>Полный рабочий день (5/2)</option>
+                                    <option>Полный рабочий день (6/1)</option>
+                                    <option>Частичная занятость</option>
+                                    <option>Временная работа</option>
+                                    <option>Волонтёрство</option>
+                                    <option>Стажировка</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cv-finder-grid mb30">
+                        <div class="cv-finder-grid__left flex-align-start text-italic fz14 mr20">
+                            Пол
+                        </div>
+                        <div class="cv-finder-grid__right flex-wrap">
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="sex">
+                                <label class="text-italic fz14">Мужской</label>
+                            </label>
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="sex">
+                                <label class="text-italic fz14">Женский</label>
+                            </label>
+                            <label class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="sex">
+                                <label class="text-italic fz14">Не важно</label>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="cv-finder-grid mb30">
+                        <div class="cv-finder-grid__left flex-align-center text-italic fz14 mr20">
+                            Образование
+                        </div>
+                        <div class="cv-finder-grid__right">
+                            <div class="default-select">
+                                <select>
+                                    <option class="text-dull-gray" disabled selected>Выберите из списка</option>
+                                    <option>Высшее</option>
+                                    <option>Среднее</option>
+                                    <option>Нет</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center fz14"><span class="cv-finder__button button button_green">Поиск</span></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

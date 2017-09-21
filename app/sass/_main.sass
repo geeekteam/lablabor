@@ -1,0 +1,976 @@
+@import "mixins/mixins"
+
+html, body
+	font-family: "Gotham Pro", sans-serif
+	margin: 0
+	color: $signal-black
+
+html
+	&.popup-opened
+		overflow: hidden
+a
+	color: inherit
+	text-decoration: none
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+
+strong, b
+	font-weight: 800
+
+*, *::after, *::before
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+input
+	&:focus
+		outline: none
+
+select
+	display: none
+	&:focus
+		outline: none
+
+button
+	border: none
+	outline: none
+	background: none
+
+.site-wrapper
+	display: flex
+	flex-direction: column
+	height: 100%
+	min-width: 320px
+
+.site-wrapper-mobile-false
+	display: flex
+	flex-direction: column
+	height: 100%
+	min-width: 1020px
+
+.section__subheader
+	background: linear-gradient(to bottom, #cecece 0%, #f5f5f5 20%, #f8f8f8 90%, #e5e5e5 100%)
+
+.section__body-with-subheader
+	background: linear-gradient(to bottom, #fefefe 0%, #e5e5e5 95%, #bdbdbe 100%)
+
+.section__body-without-subheader
+	background: linear-gradient(to bottom, #cecece 0%, #f9f9f9 10%, #c0c0c0 95%, #9f9f9f 100%)
+
+.section__body-settings
+	background: linear-gradient(to bottom, #ffffff, #8f8f8f)
+	box-shadow: inset 0 0 50px #d0d0d0
+
+.container
+	max-width: 1500px
+	margin: 0 auto
+	padding: 0 20px
+	box-sizing: content-box
+
+.container1140, .container_1140
+	max-width: 1140px
+
+.container_1280
+	max-width: 1280px
+
+.container_1160
+	max-width: 1160px
+
+.container_860
+	max-width: 860px
+
+.container_800
+	max-width: 840px
+
+.container_900
+	max-width: 940px
+
+.text-white
+	color: $white
+
+.text-dull-gray
+	color: $dull-gray
+
+.text-dark-dull-gray
+	color: $dark-dull-gray
+
+.text-light-gray
+	color: $light-gray
+
+.text-pigeon-blue
+	color: $pigeon-blue
+
+.green-text, .text-green
+	color: $forest-green
+	
+.text-red
+	color: #ff0013
+
+.text-burgundy
+	color: $burgundy
+
+.text-olive
+	color: $olive
+
+.text-purple
+	color: $purple
+
+.text-signal-black
+	color: $signal-black
+
+.link-standard
+	color: $forest-green
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+
+.link-blue
+	color: #0099ff
+
+.button
+	display: inline-block
+	font-family: "Gotham Pro", sans-serif
+	text-transform: uppercase
+	cursor: pointer
+	border-radius: 25px
+	color: $white
+	padding: 2px 5px
+	text-align: center
+	transition: all 0.3s ease
+
+.button_green
+	background: $forest-green
+	&:hover
+		box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.5)
+		color: $white
+
+.button_save-changes
+	padding: 0 50px
+	height: 40px
+	display: inline-flex
+	align-items: center
+
+.button_blue
+	background: $pigeon-blue
+	&:hover
+		box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.5)
+
+.button_gradient-green
+	width: 100%
+	background: linear-gradient(to bottom, #29942e 0%, #1d6620 50%,#29942e 100%)
+	&:hover
+		box-shadow: inset 0 0 20px rgba(#000000, 0.5), 0 0 10px rgba(#000000, 0.5)
+
+.button_gradient-blue
+	width: 100%
+	background: linear-gradient(to bottom, #556389 0%, #424e72 50%,#556389 100%)
+	&:hover
+		box-shadow: inset 0 0 20px rgba(#000000, 0.5), 0 0 10px rgba(#000000, 0.5)
+
+.button_empty-green
+	border: 1px solid $forest-green
+	color: $forest-green
+	background: transparent
+	&:hover
+		background-color: $forest-green
+		color: $white
+
+.button_empty-green
+	border: 1px solid #646464
+	color: #646464
+	background: transparent
+	&:hover
+		background: #646464
+		color: #FFFFFF
+
+.button_empty-white
+	border: 1px solid $white
+	color: $white
+	background: transparent
+	&:hover
+		box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.5)
+
+.text-center
+	text-align: center
+
+.text-left
+	text-align: left
+
+.text-right
+	text-align: right
+
+.text-italic
+	font-family: "PT Serif Italic"
+	font-style: italic
+
+.text-medium
+	font-family: "Gotham Pro Medium", sans-serif
+
+.text-light
+	font-family: "Gotham Pro Light", sans-serif
+	font-weight: 600
+
+.medium-title
+	font-family: "Gotham Pro Medium", sans-serif
+	text-transform: uppercase
+	letter-spacing: 1px
+
+.light-title
+	font-family: "Gotham Pro Light", sans-serif
+	text-transform: uppercase
+	letter-spacing: 0
+
+.text-underline
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+
+.text-without-underline
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+
+.letter-spacing-05
+	letter-spacing: 0.5px
+
+.letter-spacing-1
+	letter-spacing: 1px
+
+.grid
+	display: flex
+
+.grid-inline
+	display: inline-flex
+
+.grid_column
+	flex-direction: column
+
+.grid_4-items
+	justify-content: space-between
+	flex-wrap: wrap
+	
+	.grid__item
+		width: 21.5%
+		display: flex
+		flex-direction: column
+		align-items: center
+
+.grid_2-items
+	justify-content: space-between
+	align-items: baseline
+	flex-wrap: nowrap
+	flex-direction: row
+	
+	.grid__item
+		width: 45%
+
+	.grid__item_large
+		width: 65%
+
+	.grid__item_small
+		width: 25%
+
+.text-uppercase
+	text-transform: uppercase
+
+.breadcrumbs
+	list-style-type: none
+	display: flex
+	margin-left: 36%
+	transform: translateX(-36%)
+
+.breadcrumbs_non-margin
+	margin-left: 0
+	transform: translateX(0)
+
+.breadcrumbs_list
+	margin-left: 42%
+	transform: translateX(-42%)
+
+.breadcrubmbs__item
+	position: relative
+	padding-right: 15px
+	margin-right: 2px
+	letter-spacing: 0.5px
+	color: $signal-black
+	&::after
+		position: absolute
+		content: '/'
+		right: 0
+		top: 0
+		bottom: 0
+		font-weight: 800
+		color: $forest-green
+	&:last-child::after
+		content: none
+
+.popup-opened
+	body
+		&::after
+			position: fixed
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			z-index: 100
+
+.input
+	border-radius: 25px
+	padding: 0 15px
+	height: 30px
+	width: 100%
+
+.input__transparent
+	background-color: transparent
+
+.input__gray-border
+	border: 1px solid #b5b5b5
+
+.input__dark-gray-border
+	border: 1px solid #a1a1a1
+
+.input__active-green-border
+	&:focus, :active
+		border: 1px solid $forest-green
+
+.input__green-border
+	border: 1px solid $forest-green
+
+.select
+	font-size: 14px
+	font-family: "PT Serif Italic", sans-serif
+	color: $dark-dull-gray
+	width: 100%
+	cursor: pointer
+
+	.jq-selectbox
+		z-index: 10
+
+	ul
+		max-height: 200px
+		overflow-y: auto
+
+	li
+		margin-bottom: 15px
+		color: $signal-black
+		&:hover
+			color: $forest-green
+
+	.jq-selectbox__select
+		border: 1px solid #b5b5b5
+		border-radius: 25px
+		background-color: $white
+		padding: 0 15px
+		height: 30px
+		display: flex
+		align-items: center
+		z-index: 10
+
+	.jq-selectbox__select-text
+		display: block
+		width: 100%
+		white-space: nowrap
+		text-overflow: ellipsis
+		overflow: hidden
+
+	.jq-selectbox__trigger
+		padding-left: 3px
+
+	.jq-selectbox__trigger-arrow
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 7px 7.5px 0 7.5px
+		border-color: #b5b5b5 transparent transparent transparent
+
+	.jq-selectbox__dropdown
+		padding: 5px 5px 0 15px
+		border: 1px solid #b5b5b5
+		border-radius: 15px
+		width: 100%
+		background-color: $white
+		z-index: 100
+		&::after
+			position: absolute
+			content: ''
+			top: 10px
+			right: 10px
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 0 7.5px 7px 7.5px
+			border-color: transparent transparent #b5b5b5 transparent
+
+.select_currency
+	width: 100%
+	flex-grow: 1
+	flex-basis: 0
+	flex-shrink: 0
+	.jq-selectbox__select
+		padding: 0 10px
+
+	.jq-selectbox__dropdown
+		padding: 5px 10px
+
+.select_hover-green
+	&:hover
+		.jq-selectbox__select
+			border-color: $forest-green
+		.jq-selectbox__dropdown
+			border-color: $forest-green
+
+
+.input_hover-green
+	&:hover
+		border-color: $forest-green
+
+.select__search
+	.jq-selectbox__select
+		height: 23px
+		padding-left: 10px
+
+	.jq-selectbox__dropdown
+		margin-top: -23px
+		padding: 1px 5px 0 10px
+		border-radius: 12px
+		&::after
+			top: 6px
+
+.select_mt0
+	.jq-selectbox__dropdown
+		margin-top: 0
+
+.autocomplete-input
+	display: inline-block
+	width: 100%
+	border: 1px solid #9f9f9f
+	border-radius: 10px
+	padding: 1px 20px
+	font-size: 14px
+	color: $dark-dull-gray
+
+.ui-menu
+	width: 220px
+	background: #ffffff
+	border: 1px solid #9f9f9f
+	list-style-type: none
+	cursor: pointer
+	z-index: 101
+	border-radius: 10px
+	border-top: none
+
+.ui-menu-item
+	padding: 5px 10px
+	border-bottom: 1px solid #9f9f9f
+	&:hover
+		background-color: $forest-green
+		border-color: $forest-green
+		color: #FFFFFF
+	&:last-child
+		border-bottom-right-radius: 10px
+		border-bottom-left-radius: 10px
+		border-style: none
+	&:first-child
+		border-top-right-radius: 10px
+		border-top-left-radius: 10px
+	ul
+		background: $white
+
+.textarea
+	width: 100%
+	height: 80px
+	resize: none
+	padding: 10px 15px
+	font-size: 14px
+	font-family: "PT Serif Italic"
+	border-radius: 15px
+	outline: none
+	border: 1px solid #b5b5b5
+	&:focus, &:active, &:hover
+		border-color: $forest-green
+	+placeholder
+		opacity: 1
+		color: #616161
+
+.pagination
+	display: flex
+	justify-content: center
+
+.pagination__prev
+	margin-right: 15px
+	position: relative
+	padding: 4px
+	&::after
+		position: absolute
+		content: ''
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 10px 10px 10px 0
+		border-color: transparent $forest-green transparent transparent
+
+.pagination__next
+	position: relative
+	padding: 4px
+	&::after
+		position: absolute
+		content: ''
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 10px 0 10px 10px
+		border-color: transparent transparent transparent $forest-green
+
+.pagination-items__item
+	width: 30px
+	height: 30px
+	padding: 4px
+	&:hover
+		background-color: $forest-green
+		border-radius: 50%
+		color: $white
+
+.announce_backing
+	margin-left: 56%
+	margin-right: 0
+	transform: translateX(-56%)
+	max-width: 875px
+	width: 100%
+	padding-left: 65px
+	padding-bottom: 9px
+	position: relative
+	&::before
+		position: absolute
+		content: ''
+		top: 9px
+		bottom: 0
+		left: 0
+
+.announce__content
+	display: inline-block
+	padding: 19px 11px 19px 60px
+	position: relative
+	background: $pigeon-blue
+	max-width: 810px
+	width: 100%
+	&::before
+		position: absolute
+		content: ''
+		top: auto
+		bottom: auto
+		left: 28px
+
+.fri_announce-content-close
+	position: absolute
+	top: -5px
+	right: -5px
+	cursor: pointer
+	&:hover
+		-webkit-filter: brightness(110%)
+
+.announce__text
+	padding-top: 4px
+	letter-spacing: 0.4px
+	line-height: 1.5
+
+.round-thumbnail, .thumbnail__round
+	display: flex
+	align-items: center
+	justify-content: center
+	overflow: hidden
+	border: 1px solid $forest-green
+	border-radius: 50%
+	+transition()
+
+.thumbnail_45
+	width: 45px
+	height: 45px
+
+.thumbnail_65
+	width: 65px
+	height: 65px
+
+.thumbnail_112
+	width: 112px
+	height: 112px
+
+.round-thumbnail_125, .thumbnail_125
+	width: 125px
+	height: 125px
+
+.round-thumbnail_150, .thumbnail_150
+	width: 150px
+	height: 150px
+
+.thumbnail_200
+	width: 200px
+	height: 200px
+
+.round-thumbnail__image, .thumbnail__image
+	position: relative
+	object-fit: cover
+	height: 100%
+	width: 100%
+
+.thumbnail__image_45
+	height: 45px
+
+.thumbnail__image_65
+	height: 65px
+
+.thumbnail__image_112
+	height: 112px
+
+.round-thumbnail__image_125, .thumbnail__image_125
+	height: 125px
+
+.round-thumbnail__image_150, .thumbnail__image_150
+	height: 150px
+
+.thumbnail__image_200
+	height: 200px
+
+.thumbnail__rectangle
+	display: flex
+	align-items: center
+	justify-content: center
+	overflow: hidden
+	border: 1px solid $black
+
+.desktop-hidden
+	display: none
+
+.markered-list
+	position: relative
+	list-style-type: none
+	>li
+		position: relative
+		padding-left: 15px
+		&::before
+			position: absolute
+			content: ''
+			top: 7px
+			left: 0
+			width: 5px
+			height: 5px
+			background-color: #000000
+			border: 1px solid $black
+			border-radius: 50%
+
+.unmarkered-list
+	list-style-type: none
+
+.centered
+	margin: 0 auto
+
+.round-loupe
+	position: relative
+	width: 30px
+	height: 30px
+	background-color: $forest-green
+	border-radius: 50%
+	display: flex
+	flex-shrink: 0
+	cursor: pointer
+	.fri_search-button-loupe-17x18
+		margin: auto
+
+.default-input
+	flex-grow: 1
+	height: 34px
+	font-size: 14px
+	border: 1px solid $dark-dull-gray
+	border-radius: 25px
+	padding: 0 25px
+	background-color: #F7F7F7
+	&:focus
+		border-color: $forest-green
+		box-shadow: inset 0 0 1px rgba(28, 157, 34, 1)
+	+placeholder
+		color: $dark-dull-gray
+
+.default-input_h20
+	height: 20px
+
+.default-select
+	width: 100%
+	display: flex
+	cursor: pointer
+
+	ul
+		max-height: 200px
+		overflow-y: auto
+
+	.jq-selectbox
+		width: 100%
+		max-width: 620px
+		border: 1px solid $dull-gray
+		border-radius: 25px
+		padding: 0 15px
+		background-color: $smoke-white
+		display: flex
+
+	.jq-selectbox__trigger
+		position: absolute
+		padding-left: 3px
+		top: 50%
+		right: 0
+		margin-top: -4px
+
+	.jq-selectbox__trigger-arrow
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 7px 7.5px 0 7.5px
+		border-color: $dull-gray transparent transparent transparent
+
+	.jq-selectbox__select-text
+		padding-right: 15px
+		height: 34px
+		display: flex
+		align-items: center
+
+	.jq-selectbox__dropdown
+		padding: 8px 30px 8px 15px
+		border: 1px solid $forest-green
+		border-radius: 15px
+		min-width: calc(100% + 2px)
+		background-color: $smoke-white
+		top: -1px !important
+		left: -1px
+		&::after
+			position: absolute
+			content: ''
+			top: 11px
+			right: 14px
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 0 7.5px 7px 7.5px
+			border-color: transparent transparent $forest-green transparent
+
+		&.opened
+			.jq-selectbox
+				width: 100%
+				border: none
+		li
+			color: #999999
+			&:hover
+				color: #272727
+
+.flex-wrap
+	flex-wrap: wrap
+
+.flex-align-center
+	align-self: center
+
+.flex-align-start
+	align-self: flex-start
+
+.flex-centered
+	align-items: center
+	justify-content: center
+
+.flex-space-between
+	justify-content: space-between
+
+.flex-shrink-0
+	flex-shrink: 0
+
+.flex-grow-1
+	flex-grow: 1
+
+.flex-basis-0
+	fb
+
+.display-block
+	display: block
+
+.radio-buttons
+
+	display: flex
+	align-items: center
+
+	.jq-radio
+		border: 1px solid #6c6c6c
+		background-color: #F7F7F7
+		border-radius: 50%
+		width: 15px
+		height: 15px
+		margin-right: 5px
+		cursor: pointer
+
+.jq-radio__div
+	+transition()
+
+.radio_green-dot
+
+	.jq-radio
+		border: 1px solid #6c6c6c
+		border-radius: 50%
+		width: 15px
+		height: 15px
+		margin-right: 5px
+		cursor: pointer
+		vertical-align: middle
+		
+	.jq-radio__div
+		background-color: $forest-green
+		border-radius: 50%
+		width: 9px
+		height: 9px
+		margin: 2px auto
+		opacity: 0
+
+	.checked
+		.jq-radio__div
+			opacity: 1
+
+.radio_gray-dot
+	
+	.jq-radio__div
+		border: 3px solid $forest-green
+		background-color: #F7F7F7
+		border-radius: 50%
+		width: 15px
+		height: 15px
+		margin-top: -1px
+		margin-left: -1px
+		opacity: 0
+
+	.checked
+		.jq-radio__div
+			opacity: 1
+
+ol
+	list-style-type: none
+	counter-reset: li
+	li
+		margin-bottom: 25px
+		&:last-child
+			margin-bottom: 0
+		&:before
+			counter-increment: li
+			content: counters(li,".") ". "
+	ol
+		padding-top: 25px
+		margin-bottom: 40px
+		&:last-child
+			margin-bottom: 0
+
+		> li
+			margin-bottom: 25px
+			&:last-child
+				margin-bottom: 0
+
+.checkbox-switcher
+	cursor: pointer
+
+.checkbox-switcher
+	.checked
+		&.checkbox-switcher_span-active
+			display: inline-block
+	.checked
+		&.checkbox-switcher_span-inactive
+			display: none
+
+.round-checkbox
+	display: inline-flex
+	align-items: flex-start
+	.js-destroy-form-styler
+		display: none
+	.checkbox__div
+		position: relative
+		cursor: pointer
+		width: 14px
+		height: 14px
+		border-radius: 50%
+		border: 1px solid #616161
+		margin-right: 5px
+		margin-top: 3px
+	input[type=checkbox]:checked
+		& + .checkbox__div
+			&::after
+				content: ''
+				position: absolute
+				width: 8px
+				height: 8px
+				background-color: $forest-green
+				border-radius: 50%
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+
+.round-checkbox_blue
+	input[type=checkbox]:checked
+		& + .checkbox__div
+			&::after
+				background-color: $pigeon-blue
+
+.settings-head-item
+	width: 250px
+
+.add-vacancy
+	position: relative
+	display: flex
+	align-items: center
+	margin: 0 auto
+	cursor: pointer
+	&:hover
+		.add-vacancy__icon
+			border-color: rgba($forest-green, 0.8)
+			&::after
+				background-color: rgba($forest-green, 0.8)
+			&::before
+				background-color: rgba($forest-green, 0.8)
+		.add-vacancy__text
+			color: rgba($forest-green, 0.8)
+	&.grid-inline
+		display: inline-flex
+
+.add-vacancy__icon
+	position: relative
+	width: 30px
+	height: 30px
+	border-radius: 50%
+	border: 1px solid $forest-green
+	+transition(all 0.3s ease)
+	&::after
+		position: absolute
+		content: ''
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 18px
+		height: 4px
+		border-radius: 1px
+		background-color: $forest-green
+		+transition(all 0.3s ease)
+	&::before
+		position: absolute
+		content: ''
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 4px
+		height: 18px
+		border-radius: 1px
+		background-color: $forest-green
+		+transition(all 0.3s ease)
+
+.add-vacancy__text
+	+transition(all 0.3s ease)
+
+.green-checkbox
+	.jq-checkbox
+		width: 13px
+		height: 13px
+		border: 1px solid $dark-dull-gray
+		display: flex !important
+		align-items: center
+		justify-content: center
+
+	.checked
+		.jq-checkbox__div
+			padding: 1px 0 0 1px

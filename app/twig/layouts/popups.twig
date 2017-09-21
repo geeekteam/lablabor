@@ -1,0 +1,357 @@
+<div class="mobile-menu-popup js-popup" data-popup="mobile-menu">
+    <div class="mobile-menu">
+        <div class="mobile-menu__header mb20">
+            {% if auth == 'false' %}
+                <span class="header-login__button-login button button_green js-change-popup" data-closing-popup="mobile-menu" data-opening-popup="login-bar">Войти</span>
+            {% else %}
+                <span class="header-avatar">
+                    <div class="header-avatar__wrapper">
+                        <img src="images/default-avatar.jpg" class="header-avatar__image">
+                    </div>
+                    <div class="header-avatar__count">5</div>
+                </span>
+            {% endif %}
+            <a class="mobile-menu__close js-close-popup" href="#"></a>
+        </div>
+        <ul class="main-menu mb30">
+            {% if auth == 'true' %}
+                <li class="main-menu__item">
+                    <a class="main-menu__item-link text-without-underline" href="#">Личный кабинет</a>
+                </li>
+                <li class="main-menu__item">
+                    <a class="main-menu__item-link text-without-underline" href="#">Настройки</a>
+                </li>
+                <li class="main-menu__item">
+                    <a class="main-menu__item-link text-without-underline" href="#">Статистика</a><div class="user-menu__item-statistic">+5</div>
+                </li>
+                <li class="main-menu__item">
+                    <a class="main-menu__item-link text-without-underline" href="#">Выход</a>
+                </li>
+            {% endif %}
+            <li class="main-menu__item">
+                <a class="main-menu__item-link text-without-underline" href="#">Прайс-лист</a>
+            </li>
+            <li class="main-menu__item">
+                <a class="main-menu__item-link text-without-underline" href="#">Помощь</a>
+            </li>
+            <li class="main-menu__item">
+                <a class="main-menu__item-link text-without-underline" href="#">Договор-оферта</a>
+            </li>
+        </ul>
+        <div class="mobile-search">
+            <form class="mobile-search-form">
+                <div class="mobile-search-form__line mb10">
+                    <input class="inputs-header__input text-dull-gray text-italic" type="text" placeholder="Введите запрос">
+                </div>
+                <div class="mobile-search-form__line mb10">
+                    <div class="inputs-header__select">
+                        <select class="text-dull-gray text-italic">
+                            <option>Вакансии</option>
+                            <option>Работодатели</option>
+                        </select>
+                    </div>
+                    <div class="inputs-header__search-button button button_green">
+                        <i class="fri fri_search-button-loupe"></i>
+                    </div>
+                </div>
+            </form>
+            <a class="fz14 text-dull-gray text-italic text-without-underline" href="#">Расширенный поиск</a>
+        </div>
+    </div>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="reset-password">
+    <div class="popup">
+        <div class="close-popup popup__close js-close-popup" ></div>
+        <div class="popup__header">
+            <div class="popup__title text-medium fz22 text-uppercase text-signal-black">Восстановление пароля</div>
+        </div>
+        <form class="popup__body">
+            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Номер телефона (+7707*******)/E-mail"></p>
+            <p class="mb15">
+                <select class="select">
+                    <option disabled selected>Выберите контрольный вопрос из списка</option>
+                    <option>Девичья фамилия матери</option>
+                    <option>Кличка вашего первого домашнего животного</option>
+                    <option>Первый пляж, который вы посетили</option>
+                </select>
+            </p>
+            <p class="mb30"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Ответ на контрольный вопрос"></p>
+            <p class="text-center"><button class="popup__button button button_green fz15 text-light">Восстановить</button></p>
+        </form>
+    </div>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="employer-registration">
+    <div class="popup">
+        <div class="close-popup popup__close js-close-popup" ></div>
+        <div class="popup__header">
+            <div class="popup__title text-medium fz22 text-uppercase text-signal-black">Регистрация работодателя</div>
+        </div>
+        <form class="popup__body">
+            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Номер телефона (+7707*******)/E-mail"></p>
+            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="password" placeholder="Пароль от 8 до 20 (строчные буквы латинского алфавита и цифры)"></p>
+            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="password" placeholder="Повторите пароль"></p>
+            <p class="mb15">
+                <select class="select">
+                    <option disabled selected>Выберите контрольный вопрос из списка</option>
+                    <option>Девичья фамилия матери</option>
+                    <option>Кличка вашего первого домашнего животного</option>
+                    <option>Первый пляж, который вы посетили</option>
+                </select>
+            </p>
+            <p class="mb25"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Ответ на контрольный вопрос"></p>
+            <p class="text-italic fz14 text-dark-dull-gray mb45">Регистрируясь на сайте, вы подтверждаете, что ознакомлены и согласны с
+                <a href="#">условиями оказания услуг</a> сайта llab.kz</p>
+            <p class="text-center"><button class="popup__button button button_green fz15 text-light">Зарегистрироваться</button></p>
+        </form>
+    </div>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="competitor-registration">
+    <div class="popup">
+        <div class="close-popup popup__close js-close-popup" ></div>
+        <div class="popup__header">
+            <div class="popup__title text-medium fz22 text-uppercase text-signal-black">Регистрация соискателя</div>
+        </div>
+        <form class="popup__body">
+            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Номер телефона (+7707*******)/E-mail"></p>
+            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="password" placeholder="Пароль от 8 до 20 (строчные буквы латинского алфавита и цифры)"></p>
+            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="password" placeholder="Повторите пароль"></p>
+            <p class="mb15">
+                <select class="select" type="text">
+                    <option disabled selected>Выберите контрольный вопрос из списка</option>
+                    <option>Девичья фамилия матери</option>
+                    <option>Кличка вашего первого домашнего животного</option>
+                    <option>Первый пляж, который вы посетили</option>
+                </select>
+            </p>
+            <p class="mb25"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Ответ на контрольный вопрос"></p>
+            <p class="text-italic fz14 text-dark-dull-gray mb45">Регистрируясь на сайте, вы подтверждаете, что ознакомлены и согласны с
+                <a class="link-standard" href="#">условиями оказания услуг</a> сайта llab.kz</p>
+            <p class="text-center"><button class="popup__button button button_green fz15 text-light">Зарегистрироваться</button></p>
+        </form>
+    </div>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="search-vacancies">
+    <div class="filter">
+        <div class="close-popup popup__close js-close-popup"></div>
+        <div class="filter__section mb15">
+            <div class="filter__line mb15">
+                <div class="text-italic fz18">Вакансии</div>
+            </div>
+            <div class="filter__line">
+                <input class="js-autocomplete-input filter__input text-italic" data-source="json/vacancies.json">
+            </div>
+            <div class="filter__inputs"></div>
+        </div>
+        <div class="filter__section mb15">
+            <div class="filter__line mb15">
+                <div class="text-italic fz18">Город</div>
+            </div>
+            <div class="filter__line">
+                <input class="js-autocomplete-input filter__input text-italic" data-source="json/cities.json">
+            </div>
+            <div class="filter__inputs"></div>
+        </div>
+        <div class="filter__section mb15">
+            <div class="filter__line mb15">
+                <div class="text-italic fz18">Образование</div>
+            </div>
+            <div class="filter__line">
+                <select class="js-select-education select select__search text-italic">
+                    <option disabled selected>Выберите образование</option>
+                    <option>Высшее</option>
+                    <option>Среднее</option>
+                    <option>Нет</option>
+                </select>
+            </div>
+            <div class="filter__inputs"></div>
+        </div>
+
+        <div class="filter__section mb15">
+            <div class="filter__line filter__line_justify-start filter__line_align-baseline mb15">
+                <div class="text-italic fz18 mr5">Зарплата</div>
+                <i class="fri fri_filter-show-input"></i>
+            </div>
+
+
+            <div class="filter__section mb15">
+                <div class="filter__line filter__line_justify-start mb7">
+                    <input class="filter__input filter__input_salary text-italic mr5" type="text" placeholder="100.000">
+                    <span class="mr5 text-dark-dull-gray">-</span>
+                    <input class="filter__input filter__input_salary text-italic" type="text" placeholder="150.000">
+                </div>
+                <div class="filter__line filter__line_currency filter__line_justify-start">
+                    <select class="filter__select-currency text-dull-gray text-italic select select__search">
+                        <option>KZT</option>
+                        <option>USD</option>
+                    </select>
+                    <i class="fri fri_filter-add-input js-add-filter-select-currency"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter__section mb15">
+            <div class="filter__line mb15">
+                <div class="text-italic fz18">Вид деятельности</div>
+            </div>
+            <div class="filter__line">
+                <input class="js-autocomplete-input filter__input text-italic" data-source="json/activities.json">
+            </div>
+            <div class="filter__inputs"></div>
+        </div>
+
+        <div class="filter__section mb15">
+            <div class="filter__line mb15">
+                <div class="text-italic fz18">Тип занятости</div>
+            </div>
+            <div class="filter__line">
+                <select class="js-select-education select select__search text-italic">
+                    <option disabled selected>Выберите тип занятости</option>
+                    <option>Полный рабочий день (5/2)</option>
+                    <option>Полный рабочий день (6/1)</option>
+                    <option>Частичная занятость</option>
+                    <option>Временная работа</option>
+                    <option>Волонтёрство</option>
+                    <option>Стажировка</option>
+                </select>
+            </div>
+            <div class="filter__inputs"></div>
+        </div>
+
+        <div class="filter__section mb15">
+            <div class="filter__line mb15">
+                <div class="text-italic fz18">Опыт работы</div>
+            </div>
+            <div class="filter__line">
+                <select class="js-select-education select select__search text-italic">
+                    <option disabled selected>Выберите опыт работы</option>
+                    <option>Не имеет значение</option>
+                    <option>До 1 года</option>
+                    <option>1-3 года</option>
+                    <option>3-5 лет</option>
+                    <option>5-10 лет</option>
+                    <option>Более 10 лет</option>
+                </select>
+            </div>
+            <div class="filter__inputs"></div>
+        </div>
+        <p class="filter__search-button text-center hidden"><button class="popup__button button button_green fz15 text-light">Поиск</button></p>
+    </div>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="order-form">
+    <form class="order-form">
+        <div class="close-popup popup__close order-form__close js-close-popup"></div>
+        <div class="order-form__title text-center fz16 text-uppercase mb45">Форма заказа</div>
+        <div class="order-form__grid order-form-grid mb15">
+            <div class="order-form-grid__name text-light fz15 text-uppercase">Номер заказа:</div>
+            <div class="order-form-grid__param fz15 text-uppercase"><strong>0000005566</strong></div>
+        </div>
+        <div class="order-form__grid order-form-grid mb15">
+            <div class="order-form-grid__name text-light fz15 text-uppercase">Продукт:</div>
+            <div class="order-form-grid__param fz15 text-uppercase"><strong>Абонентский пакет "Standard"</strong></div>
+        </div>
+        <div class="order-form__grid order-form-grid mb15">
+            <div class="order-form-grid__name text-light fz15 text-uppercase">Сумма заказа:</div>
+            <div class="order-form-grid__param fz15 text-uppercase"><strong>50 000 KZT</strong></div>
+        </div>
+        <div class="order-form__grid order-form-grid mb45">
+            <div class="order-form-grid__name text-light fz15 text-uppercase">Ваш email:</div>
+            <div class="order-form-grid__param fz15 text-uppercase"><input class="input default-input default-input_h20" type="text"></div>
+        </div>
+        <p class="text-center"><button class="order-form__button popup__button button button_green fz15 text-light">Оформить</button></p>
+    </form>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="response">
+    <div class="response">
+        <div class="close-popup popup__close response__close js-close-popup"></div>
+        <div class="response__text fz18">Ваш отклик <span class="text-green">успешно</span> отправлен работодателю!</div>
+    </div>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="order-form-applicant">
+    <div class="response">
+        <div class="close-popup popup__close response__close js-close-popup"></div>
+        <div class="response__text fz18 text-center">
+            Данный вид оплаты сейчас <span class="text-red">недоступен</span>.<br>
+            Воспользуйтесь пожалуйста другим.
+        </div>
+    </div>
+</div>
+
+
+<div class="popup-wrapper js-popup" data-popup="to-invite-statistic">
+    <form class="to-invite to-invite_statistic">
+        <div>
+            <div class="mb10">
+                <textarea class="to-invite__textarea" placeholder="Напишите пригласительное письмо"></textarea>
+            </div>
+            <div class="to-invite__grid to-invite-grid">
+                <span class="to-invite-grid__button button button_green fz12 mr10">Отправить</span>
+                <div class="to-invite-grid__checkbox">
+                    <div class="to-invite__checkbox">
+                        <input type="checkbox" class="" id="to-invite__checkbox">
+                        <label class="text-italic fz12 text-underline" for="to-invite__checkbox">Вставить автоматический текст приглашения</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="company-preview">
+    <div class="company-preview">
+        <div class="close-popup popup__close js-close-popup"></div>
+
+        <p class="text-center fz12 text-light text-uppercase mb10">Название компании</p>
+        <div class="company-preview-grid">
+            <div class="company-preview-grid__left-item mr10">
+                <div class="thumbnail thumbnail__round thumbnail_65">
+                    <img class="thumbnail__image_65" src="images/default-logo.png" alt="">
+                </div>
+            </div>
+            <div class="company-preview-grid__right-item">
+                <p class="text-italic fz12 mb5">Здесь будет текст самого письма. Напишу пока какой-то еще текст, чтобы заполнить пространство. Бла-бла-бла. Еще какая-то строчка, чтобы их было хотя бы три.</p>
+                <p class="text-italic fz12 text-dark-dull-gray">Отправлено 18.01.2017</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="delete-vacancy">
+    <div class="delete-vacancy">
+        <div class="close-popup popup__close js-close-popup"></div>
+        <p class="fz18 text-light text-uppercase text-dark-dull-gray mb5">Удаление вакансии</p>
+        <p class="fz18 text-medium text-uppercase text-dark-dull-gray mb25">Название удаляемой вакансии</p>
+        <p class="text-italic fz18 text-dark-dull-gray mb30 text-center">Вы действительно хотите удалить вакансию без возможности автоматического восстановления?</p>
+        <div class="grid">
+            <span class="delete-vacancy__button button button_green mr30 text-center">Да</span>
+            <span class="delete-vacancy__button button button_blue text-center js-close-popup">Нет</span>
+        </div>
+    </div>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="save-settings">
+    <div class="save-settings">
+        <div class="close-popup popup__close js-close-popup save-settings__close"></div>
+        <p class="fz16 text-light text-uppercase text-center mb30 text-signal-black">Уведомление</p>
+        <p class="fz18 text-medium text-uppercase text-center mb50 text-signal-black">Обновления по кабинету сохранены!</p>
+        <p><span class="button button_green save-settings__button js-close-popup">Закрыть</span></p>
+    </div>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="save-cabinet">
+    <div class="save-cabinet">
+        <div class="close-popup popup__close js-close-popup save-settings__close"></div>
+        <p class="fz16 text-light text-uppercase text-center mb30 text-signal-black">Уведомление</p>
+        <p class="fz18 text-medium text-uppercase text-center mb50 text-signal-black">Сохранить изменения?</p>
+        <div class="grid flex-space-between">
+            <span class="button button_gradient-green save-cabinet__button">Сохранить</span>
+            <span class="button button_gradient-blue save-cabinet__button js-close-popup">Закрыть</span>
+        </div>
+    </div>
+</div>
