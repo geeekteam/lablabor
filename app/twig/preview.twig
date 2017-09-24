@@ -1,0 +1,40 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Lablabor | Главная страница{% endblock %}
+
+{% set auth = 'false' %}
+{% set mobile = 'true' %}
+{% set page_clear = 'false' %}
+
+{% block content %}
+
+	<div class="section section__body-without-subheader pt50 pb50 tab-pb15 tab-pt15">
+		<div class="container">
+			<p><a href="/home_guest.html" class="text-without-underline">Главная (Гость)</a></p>
+			<p><a href="/home_auth.html" class="text-without-underline">Главная (Авторизованный пользователь)</a></p>
+			<p><a href="/advertising_us.html" class="text-without-underline">О рекламе на сайте</a></p>
+			<p><a href="/applicant_stat.html" class="text-without-underline">Статистика соискателя</a></p>
+			<p><a href="/employer_stat.html" class="text-without-underline">Статистика работодателя</a></p>
+			<p><a href="/cabinet_applicant.html" class="text-without-underline">Кабинет соискателя</a></p>
+			<p><a href="/cabinet_employer.html" class="text-without-underline">Кабинет работодателя</a></p>
+			<p><a href="/cv_finder_opts.html" class="text-without-underline">Расширенный поиск резюме</a></p>
+			<p><a href="/cv_pdf.html" class="text-without-underline">Печать резюме</a></p>
+			<p><a href="/cv_view.html" class="text-without-underline">Резюме соискателя</a></p>
+			<p><a href="/employer_view.html" class="text-without-underline">Профиль работодателя</a></p>
+			<p><a href="/search_cv.html" class="text-without-underline">Поиск резюме</a></p>
+			<p><a href="/search_vacancies.html" class="text-without-underline">Поиск вакансий</a></p>
+			<p><a href="/vacancy_finder_opts.html" class="text-without-underline">Расширенный поиск вакансий</a></p>
+			<p><a href="/vacancy_view.html" class="text-without-underline">Вакансия работодателя</a></p>
+			<p><a href="/settings.html" class="text-without-underline">Настройки учётной записи</a></p>
+			<p><a href="/social_forward.html" class="text-without-underline">Авторизация в соцсетях</a></p>
+			<p><a href="/price_list.html" class="text-without-underline">Тарифные планы</a></p>
+			<p><a href="/order_applicant.html" class="text-without-underline">Оплата заказа</a></p>
+			<p><a href="/offer.html" class="text-without-underline">Публичная оферта</a></p>
+			<p><a href="/help.html" class="text-without-underline">Часто задаваемые вопросы</a></p>
+			<p><a href="/error.html" class="text-without-underline">Страница 404</a></p>
+			<p><a href="/article.html" class="text-without-underline">Статья</a></p>
+			<p><a href="/about.html" class="text-without-underline">О нас</a></p>
+		</div>
+	</div>
+
+{% endblock %}
